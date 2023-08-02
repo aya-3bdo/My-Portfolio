@@ -1,0 +1,481 @@
+*,
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background-col);
+  height: 100%;
+  overflow: hidden;
+}
+
+html {
+  behavior: smooth;
+}
+
+/* main fonts */
+:root {
+  --headers: "Bree Serif", serif;
+  --paragraphs: "Oswald", sans-serif;
+  --buttons: "Lora", serif;
+  --background-col: rgba(119, 108, 100, 0.079);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div {
+  font-family: var(--headers) !important;
+}
+
+p {
+  font-family: var(--paragraphs);
+}
+
+/* ----------------------- Secton_1 ----------------------------------*/
+.section_1 {
+  background-size: cover;
+  background-image: linear-gradient(#000000a3, #4a474749),
+    url("../imgs/test1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+@media (max-width: 1023px) {
+  .navbar .nav_container ul li {
+    margin: 0.2rem 0;
+    text-align: center;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar .nav_container ul li a {
+    width: fit-content;
+    border-radius: 48%;
+    background-color: rgba(231, 236, 240, 0.243);
+    color: #ffcc33 !important;
+    padding: 0.5rem 0.4rem;
+  }
+  .section_1 .navbar {
+    background-color: hsla(0, 0%, 0%, 0.6) !important;
+    backdrop-filter: blur(2px) !important;
+  }
+}
+
+.section_1 .navbar {
+  min-height: 11vh;
+  background-color: #00000078;
+  width: 100%;
+  z-index: 20;
+}
+
+.navbar .nav_container .logo {
+  font-family: "Oleo Script", cursive;
+  letter-spacing: 0.3rem;
+  color: #f6b565;
+}
+
+.navbar .nav_container .logo:hover {
+  color: #f4d4ad;
+}
+
+.navbar .nav_container ul li a {
+  color: white;
+  font-size: 1rem;
+  font-family: var(--paragraphs);
+}
+
+.navbar .nav_container ul li {
+  padding: 0 0.3rem;
+}
+
+.navbar .nav_container .navbar-toggler {
+  box-shadow: none !important;
+}
+
+.navbar .nav_container ul li a:hover {
+  color: #ffd096;
+}
+.section_1 .nav_cont .about-me {
+  border-radius: 20em;
+  padding-top: 5%;
+  color: #ffffff;
+}
+
+.section_1 .nav_cont .about-me div .btn {
+  font-family: var(--buttons);
+}
+
+@keyframes download-arrow {
+  0% {
+    font-size: 1.2rem;
+    transform: translateY(-30%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    font-size: 1.1rem;
+    transform: translateY(0%);
+  }
+}
+
+.svg-inline--fa.fa-arrow-down {
+  animation-name: download-arrow;
+  animation-duration: 1.2s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+  color: #ffcc33;
+  font-weight: 900;
+  box-shadow: 5px 5px 3px 2px #19181666 outset;
+}
+
+.svg-inline--fa.fa-arrow-down:hover {
+  color: #f6b565;
+  font-size: 1.5rem;
+  transition: all 0.6s;
+}
+
+.section_1 .nav_cont .about-me p {
+  font-family: var(--paragraphs);
+}
+
+.section_1 .nav_cont .about-me h4,
+h2 {
+  font-family: var(--headers);
+}
+
+/* ----------------------- section 2  ----------------------------------*/
+.section_2 .aboutContainer,
+.section_2 .skills-slice {
+  position: relative;
+}
+
+.section_2 .aboutContainer .imgProfile-container {
+  opacity: 0;
+  transform: translateX(-7%);
+}
+
+.section_2 .aboutContainer .about-me {
+  opacity: 0;
+  transform: translateX(7%);
+}
+
+.section_2 .skills-slice p {
+  opacity: 0;
+  transform: translateX(-7%);
+}
+
+.section_2 .skills-bars {
+  opacity: 0;
+  transform: translateX(7%);
+}
+
+.section_2 .aboutContainer .imgProfile-container.active {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.section_2 .aboutContainer .about-me.active {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.section_2 .skills-slice p.active {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.section_2 .skills-bars.active {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.section_2 .aboutContainer .imgProfile-container.active,
+.section_2 .aboutContainer .about-me.active,
+.section_2 .skills-slice p.active,
+.section_2 .skills-bars.active {
+  transition: transform 1.9s, opacity 1.3s ease-in-out;
+}
+
+.section_2 .skills-bars.progress {
+  font-size: 0.88rem;
+  font-family: var(--headers);
+  height: 1rem !important;
+}
+
+.section_2 .skills-bars.progress .progress-bar {
+  background-color: #055160f5 !important;
+}
+
+.section_2 .skills-bars .html.active {
+  width: 98% !important;
+  transition: width 1.4s;
+  opacity: 1;
+}
+.section_2 .skills-bars .css.active {
+  width: 90% !important;
+  transition: width 1.4s;
+  opacity: 1;
+}
+.section_2 .skills-bars .js.active {
+  width: 90% !important;
+  transition: width 1.4s;
+  opacity: 1;
+}
+.section_2 .skills-bars .react.active {
+  width: 85% !important;
+  transition: width 1.4s;
+  opacity: 1;
+}
+.section_2 .skills-bars .bootstrap.active {
+  width: 95% !important;
+  transition: width 1.4s;
+  opacity: 1;
+}
+.section_2 .skills-bars .jquery.active {
+  width: 88% !important;
+  transition: width 1.4s;
+  opacity: 1;
+}
+.section_2 .skills-bars .sass.active {
+  width: 95% !important;
+  transition: width 1.4s;
+  opacity: 1;
+}
+
+/* ----------------------- section 3  ----------------------------------*/
+.section_3 {
+  min-height: 80vh;
+}
+
+.section_3 .container .row .parent div .fa-windows {
+  color: #0078d7;
+}
+
+.section_3 .container .row .parent div .fa-arrow-trend-up {
+  color: #0045b7e0;
+}
+
+.section_3 .container .row .parent div .fa-display {
+  color: #041f4c;
+}
+
+.section_3 .container .row .parent div .fa-figma {
+  color: #f44c1efe;
+}
+
+@media (hover: hover) {
+  .section_3 .project-details {
+    height: 0%;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    width: 100%;
+    color: whitesmoke;
+    background: linear-gradient(
+      hsla(199, 56%, 34%, 0.66),
+      hsla(199.1, 75%, 17.3%, 0.89)
+    );
+    border-radius: 0.2rem;
+    position: absolute;
+    left: 0;
+    font-size: 0.8em;
+    cursor: pointer;
+    font-weight: 400 !important;
+    overflow: hidden;
+    transition: height 0.55s ease-in-out;
+  }
+
+  .section_3 .project-details .links-container a {
+    display: inline-block;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    text-decoration: none;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .section_3 .parent:hover .project-details {
+    height: 100%;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  .section_3 .project-details .links-container a:hover {
+    color: hsl(165.8, 47.6%, 63.3%);
+  }
+}
+
+@media (hover: none) {
+  .section_3 .project-details {
+    height: 100%;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    width: 100%;
+    color: whitesmoke;
+    background: linear-gradient(
+      hsla(199, 56%, 34%, 0.66),
+      hsla(199.1, 75%, 17.3%, 0.89)
+    );
+    border-radius: 0.2rem;
+    position: absolute;
+    bottom: 0;
+    font-size: 0.8em;
+    cursor: pointer;
+    font-weight: 400 !important;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+  }
+
+  .section_3 .project-details .links-container a {
+    display: inline-block;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    text-decoration: none;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
+/* ----------------------- section 4  ----------------------------------*/
+.section_4 {
+  min-height: 50vh;
+}
+
+.section_4 .carou_parent .carousel-item .image {
+  width: 3.5rem !important;
+  height: 3.5rem !important;
+  border-radius: 50% !important;
+  overflow: hidden;
+  margin: auto;
+  overflow: hidden;
+}
+
+.section_4 .carou_parent .container {
+  width: 80%;
+  margin: auto;
+}
+
+.section_4 .carou_parent .carousel-item .carousel-caption {
+  position: static;
+}
+
+.section_4 .container .carousel-indicators [data-bs-target] {
+  border-radius: 100% !important;
+  width: 0.7rem !important;
+  height: 0.7rem !important;
+}
+
+/* ----------------------- section 5  ----------------------------------*/
+.fifth_section {
+  height: 100%;
+  background-color: #28292d;
+  overflow: hidden;
+}
+
+.fifth_section .container-md .contacts .fa-github,
+.fifth_section .container-md .contacts .fa-paper-plane,
+.fifth_section .container-md .contacts .fa-linkedin-in {
+  font-size: 1.3rem;
+  margin: 0.9rem 1.2rem !important;
+  background: rgba(177, 164, 164, 0.249);
+  padding: 0.6rem;
+  border-radius: 1.5rem;
+}
+
+.fifth_section .container-md .contacts .fa-github {
+  color: #4078c0;
+}
+
+.fifth_section .container-md .contacts .fa-paper-plane {
+  color: #0088cc;
+}
+
+.fifth_section .container-md .contacts .fa-linkedin-in {
+  color: #0a66c2;
+}
+
+.container-md .contacts a {
+  display: block;
+  text-decoration: none;
+}
+
+.fifth_section .container-md .contacts a :hover {
+  color: whitesmoke;
+}
+
+.fifth_section .container-md textarea {
+  width: 100%;
+  outline: none !important;
+  background: transparent;
+  border-radius: 0.7rem;
+  border-color: #37302a !important;
+}
+
+.fifth_section .container-md input {
+  outline: none !important;
+  width: 100%;
+  font-size: 0.9rem;
+  border: 1px solid hsl(28, 13%, 19%) !important;
+  border-radius: 0.7rem;
+  background-color: #28292d !important;
+}
+
+.fifth_section .container-md #submit {
+  background: rgba(17, 82, 128, 0.79) !important;
+  color: whitesmoke;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.6rem;
+  font-size: 1.05rem;
+  width: 6em;
+  font-family: var(--buttons);
+  box-shadow: none;
+  font-weight: 600;
+}
+
+.fifth_section .container-md button {
+  background: hsl(196.9, 67.2%, 22.7%);
+  border: none;
+  padding: 0.4rem;
+  color: white;
+  font-size: 0.6rem;
+  font-family: var(--paragraphs);
+  box-shadow: none;
+  display: none;
+}
+
+.fifth_section .container-md input:focus,
+.container-md textarea:focus {
+  border: 1px solid hsl(0, 3%, 60%) !important;
+  border-radius: 0.7rem !important;
+  background-color: #28292d !important;
+}
+
+/*  Fix the changing background colour in chrome while autocompleting*/
+.fifth_section .container-md input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  background-color: #28292d !important;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px #23232329;
+}
