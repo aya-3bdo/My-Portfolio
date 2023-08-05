@@ -75,7 +75,12 @@ $(document).ready(function () {
       });
       fieldsSatisfied = false;
     } else {
-      sendMessage();
+      try {
+      sendMessage();  
+      } catch (error) {
+        alert("OOPS! message hasn't beent sent .. You can text me on Telegram or Linkedin or try again later.");
+        console.log(error);
+      }
     }
   });
 
@@ -96,13 +101,12 @@ $(document).ready(function () {
       .send(serviceID, templateID, templateParams, publicKey)
       .then((res) => {
         console.log(res);
-        res.status === 200 || res.text === "OK"
-          ? alert("message has beent sent successfully")
-          : alert(
-              "OOPS! message hasn't beent sent .. You can text me on Telegram or Linledin or try again later."
-            );
+        if (res.status === 200 || res.text === "OK") {
+           alert("message has beent sent successfully")
+        } else {
+           throw "Something went wrong while sending the message."
+        } 
       })
-      .catch((err) => console.log(err));
   }
 
   // The end of onreload function
