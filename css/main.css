@@ -11,7 +11,7 @@
 body {
   background-color: var(--background-col);
   height: 100%;
-  overflow: hidden;
+  overflow: hidden!important;
 }
 
 html {
@@ -387,7 +387,8 @@ h2 {
 .fifth_section {
   height: 100%;
   background-color: #28292d;
-  overflow: hidden;
+  overflow: hidden!important;
+  min-width: 105vw!important;
 }
 
 .fifth_section .container-md .contacts .fa-github,
@@ -427,6 +428,7 @@ h2 {
   background: transparent;
   border-radius: 0.7rem;
   border-color: #37302a !important;
+  resize: none;
 }
 
 .fifth_section .container-md input {
@@ -450,15 +452,21 @@ h2 {
   font-weight: 600;
 }
 
+.fifth_section .container-md .counter{
+  font-size: 0.5rem;
+}
+
 .fifth_section .container-md button {
   background: hsl(196.9, 67.2%, 22.7%);
   border: none;
-  padding: 0.4rem;
+  padding: 0.2rem;
   color: white;
-  font-size: 0.6rem;
-  font-family: var(--paragraphs);
+  font-size: 0.5rem;
+  font-family: var(--buttons);
   box-shadow: none;
   display: none;
+  overflow: hidden!important;
+  font-weight: 500;
 }
 
 .fifth_section .container-md input:focus,
