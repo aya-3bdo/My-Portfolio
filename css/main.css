@@ -184,31 +184,14 @@ h2 {
   transform: translateX(7%);
 }
 
-.section_2 .aboutContainer .imgProfile-container.active {
-  opacity: 1;
-  transform: translateX(0%);
-}
-
-.section_2 .aboutContainer .about-me.active {
-  opacity: 1;
-  transform: translateX(0%);
-}
-
-.section_2 .skills-slice p.active {
-  opacity: 1;
-  transform: translateX(0%);
-}
-
-.section_2 .skills-bars.active {
-  opacity: 1;
-  transform: translateX(0%);
-}
 
 .section_2 .aboutContainer .imgProfile-container.active,
 .section_2 .aboutContainer .about-me.active,
 .section_2 .skills-slice p.active,
 .section_2 .skills-bars.active {
-  transition: transform 1.9s, opacity 1.3s ease-in-out;
+  opacity: 1;
+  transform: translateX(0%); 
+  transition: transform 1.8s ease-in-out, opacity 1.4s ease-in-out;
 }
 
 .section_2 .skills-bars.progress {
@@ -277,7 +260,7 @@ h2 {
 .section_3 .container .row .parent div .fa-figma {
   color: #f44c1efe;
 }
-
+/*  for Screens that accept hover  such as pc*/
 @media (hover: hover) {
   .section_3 .project-details {
     height: 0%;
@@ -320,6 +303,8 @@ h2 {
     color: hsl(165.8, 47.6%, 63.3%);
   }
 }
+
+/*  for Screens that don't accept hover  such as mobiles*/
 
 @media (hover: none) {
   .section_3 .project-details {

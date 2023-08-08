@@ -5,28 +5,28 @@ $(document).ready(function () {
   let skillBar = $("#skills")[0];
   let imgProfileContainer = $(".imgProfile-container")[0];
   let aboutMe = $(".about-me")[0];
-  let skillsHeader = $('#skillsHeader')[0];
+  let skillsHeader = $("#skillsHeader")[0];
   let form = $("form")[0];
   let userMessage = $("textarea")[0];
   let name = $("[type = 'text']")[0];
   let email = $("[type = 'email']")[0];
-  let characterCounter = $('.counter')[0];
-  let maxlength = userMessage.getAttribute('maxlength');
+  let characterCounter = $(".counter")[0];
+  let txtAreaMaxlength = userMessage.getAttribute("maxlength");
 
   /*  ------------------  Call textArea counter function everytime the page reloads    -------------------- */
   textareaCounter();
 
   /* ---------------------------------------  TextArea counter function ------------------------------------ */
- function textareaCounter() {
-   characterCounter.innerText = `${userMessage.value.length} / ${maxlength}`; 
-   if (userMessage.value.length == 220) {
-     $('#counter-pop').fadeIn(100).fadeOut(4500);
-   }
+  function textareaCounter() {
+    characterCounter.innerText = `${userMessage.value.length} / ${txtAreaMaxlength}`;
+    if (userMessage.value.length == 220) {
+      $("#counter-pop").fadeIn(100).fadeOut(4500);
+    }
   }
   /*  ------------------  Call textArea counter function everytime the user hits the keyboard to write the message   -------------------- */
-  userMessage.addEventListener('keyup', textareaCounter);
+  userMessage.addEventListener("keyup", textareaCounter);
 
-  /* ---------------------------------------  Typing function ------------------------------------ */
+  /* ---------------------------------------  Typing function of  the personal Data ------------------------------------ */
   new Typed(".personalData", {
     strings: [
       "",
@@ -43,7 +43,6 @@ $(document).ready(function () {
   });
   /* ---------------------------------------  Typing function End------------------------------------ */
 
-  
   /* ---------------------------------------  Intersection Observer function ------------------------------------ */
   const observer = new IntersectionObserver(
     (entries) => {
@@ -72,7 +71,7 @@ $(document).ready(function () {
   /*   ------------------------------------------   resivenig messages functions---------------------------------------------------*/
 
   // ------------------------>> Form Validation function [1].
- 
+
   form.addEventListener("submit", (e) => {
     let fieldsSatisfied = true;
     if (!fieldsSatisfied) {
@@ -84,23 +83,29 @@ $(document).ready(function () {
         $("#name-pop").fadeOut(5500);
       });
       fieldsSatisfied = false;
-    } else if (userMessage.value.length < 10 || userMessage.value === "" || userMessage.value === null) {
+    } else if (
+      userMessage.value.length < 10 ||
+      userMessage.value === "" ||
+      userMessage.value === null
+    ) {
       $("#msg-pop").fadeIn(500, function () {
         $("#msg-pop").fadeOut(5500);
       });
       fieldsSatisfied = false;
     } else {
       try {
-      sendMessage();  
+        sendMessage();
       } catch (error) {
-        alert("OOPS! message hasn't beent sent .. You can text me on Telegram or Linkedin or try again later.");
+        alert(
+          "OOPS! message hasn't beent sent .. You can text me on Telegram or Linkedin or try again later."
+        );
         console.log(error);
       }
     }
   });
 
   // ------------------------>> Send Message function[2].
-  
+
   function sendMessage() {
     let templateParams = {
       name: name.value,
@@ -117,11 +122,11 @@ $(document).ready(function () {
       .then((res) => {
         console.log(res);
         if (res.status === 200 || res.text === "OK") {
-           alert("message has beent sent successfully")
+          alert("message has beent sent successfully");
         } else {
-           throw "Something went wrong while sending the message."
-        } 
-      })
+          throw "Something went wrong while sending the message.";
+        }
+      });
   }
 
   // The end of onreload function
