@@ -86,18 +86,17 @@
           <div class="fs-1 pb-3">
             <span class="personalData"> </span>
           </div>
-          <p class="px-lg-5 mx-lg-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-            dolorum architecto iste eos eaque dignissimos,tempore excepturi
-            saepe earum quidem.
-          </p>
           <div class="my-2">
             <span>download my <span class="text-uppercase">cv </span> </span>
             <br />
             <div
               class="btn rounded-pill fs-5 p-1.5 p-md-2.7 px-3 bg-transparent text-white"
             >
-              <i class="fa-solid fa-arrow-down"></i>
+                <a href="./imgs/oop_mob.pdf" download>
+              <i class="fa-solid fa-arrow-down">
+              </i>
+
+                </a>
             </div>
           </div>
         </div>
@@ -109,21 +108,23 @@
       <div
         class="row aboutContainer d-flex justify-content-center align-items-center px-4 px-lg-3 mb-5"
       >
-        <div class="col-lg-4 mb-3 mb-lg-0 pe-3">
+        <div class="col-lg-4 mb-3 mb-lg-0 pe-3  d-md-flex justify-content-center">
           <div class="imgProfile-container mx-auto">
             <img
               class="img-fluid rounded img-thumbnail"
-              src="imgs/profile.png"
+              src="imgs/profile2.jpeg"
               alt="personal pic"
             />
+
           </div>
         </div>
         <div class="col-lg-4 mt-4 mt-lg-0">
           <div class="about-me mx-auto px-2">
-            <h3 class="d-flex d-lg-block justify-content-center">about me</h3>
+            <h3 class="d-flex d-lg-block justify-content-center">about me</h3> 
             <h4 class="mb-4 d-flex d-lg-block justify-content-center">
               hi, <span>i'm john doe</span>
             </h4>
+  
             <p class="text-black-50">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro,
               dolor error vel laboriosam dolore dolores nulla.
@@ -147,8 +148,8 @@
       <div
         class="row skills-slice container px-2 px-lg-3 d-flex align-items-center mx-auto my-4"
       >
-        <div class="col-lg-6 my-2 d-flex justify-content-center d-lg-block">
-          <p class="display-4 mx-auto" id="skillsHeader">my skills</p>
+        <div class="col-lg-6 my-2 d-flex justify-content-center ">
+          <p class="display-4 mx-auto">my skills</p>
         </div>
 
         <div id="skills" class="col-lg-6 skills-bars mx-auto">
@@ -166,7 +167,6 @@
               aria-valuemin="0"
               aria-valuemax="100"
             >
-              98%
             </div>
           </div>
 
@@ -184,7 +184,6 @@
               aria-valuemin="0"
               aria-valuemax="100"
             >
-              85%
             </div>
           </div>
 
@@ -202,7 +201,6 @@
               aria-valuemin="0"
               aria-valuemax="100"
             >
-              85%
             </div>
           </div>
 
@@ -220,7 +218,6 @@
               aria-valuemin="0"
               aria-valuemax="100"
             >
-              90%
             </div>
           </div>
 
@@ -238,7 +235,6 @@
               aria-valuemin="0"
               aria-valuemax="100"
             >
-              92%
             </div>
           </div>
 
@@ -256,7 +252,6 @@
               aria-valuemin="0"
               aria-valuemax="100"
             >
-              95%
             </div>
           </div>
           <div
@@ -273,18 +268,32 @@
               aria-valuemin="0"
               aria-valuemax="100"
             >
-              95%
             </div>
           </div>
+
+ <div
+            class="d-flex justify-content-md-start justify-content-center pb-1 pb-lg-2"
+          >
+            Typescript
+          </div>
+          <div class="progress mb-1 rounded-pill d-flex" style="height: 0.8rem">
+            <div
+              class="progress-bar opacity-25 typescript"
+              role="progressbar"
+              style="width: 0"
+              aria-valuenow="100"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+            </div>
+
+
         </div>
       </div>
     </div>
 
-    <!-- -- -- -- -- -- -- -- -- -- -- -- --  Third Section  -- -- -- -- -- -- -- -- -- -- -- --  -->
-    <div
-      class="section_3 mt-3 my-5 d-flex justify-content-center align-items-center flex-column"
-      id="portfolio"
-    >
+                          <!-- -- -- -- -- -- -- -- -- -- -- -- --  Third Section  -- -- -- -- -- -- -- -- -- -- -- --  -->
+    <div class="section_3 mt-3 my-5 d-flex justify-content-center align-items-center flex-column" id="portfolio">
       <div class="container">
         <div class="row px-2">
           <div
@@ -292,13 +301,55 @@
           >
             my works
           </div>
-
-          <div class="col-lg-4 col-md-6 my-2 my-lg-3">
+           <div class="col-lg-4 col-md-6 my-2 my-lg-3">
             <div
-              class="parent border rounded-3 p-3 d-flex flex-column justify-content-center align-items-center position-relative"
+              class="parent border rounded-3 p-4 p-md-3 d-flex flex-column align-items-center justify-content-center position-relative"
             >
               <div>
-                <img class="img-fluid" src="/imgs/CRUD.png" alt="CRUD image" />
+                <img
+                  class="img-fluid"
+                  src="./imgs/Gallery.jpeg"
+                  alt="gallery project image"
+                />
+              </div>
+              <div class="text-black-50 fw-bold fs-5 py-2 text-capitalize">
+                Photo gallery
+              </div>
+              <div
+                class="project-details d-flex flex-column justify-content-center py-2 text-center"
+              >
+                <p class="mt-4 py-lg-2 py-1 px-2 px-lg-3 mb-0">
+                  A simple responsive photo gallery with a button for switching
+                  between light and dark mode. <br />
+                  skills: React, Css, Bootstrap, RTK, React-router-dom, JSON-server, axios, Vite, React-icons, Jquery.
+                </p>
+                <div>
+                  <div
+                    class="links-container d-flex justify-content-center mb-sm-2 mb-md-3 pb-2 pt-1"
+                  >
+                    <a
+                      href="#"
+                      target="_blank"
+                    >
+                      <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a
+                      href="#"
+                      target="_blank"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 my-2 my-lg-3">
+            <div
+              class="parent border rounded-3 p-4 p-md-3 d-flex flex-column justify-content-center align-items-center position-relative"
+            >
+              <div>
+                <img class="img-fluid" src="./imgs/CRUD.jpeg" alt="CRUD image" />
               </div>
               <div class="text-black-50 fw-bold fs-5 py-2">CRUD Project</div>
               <div
@@ -306,7 +357,7 @@
               >
                 <p class="mt-4 py-lg-2 py-1 px-2 px-lg-3 mb-0">
                   A responsive Create Update Delete & Search for items app, with
-                  a button for switching between light and dark mode. <br />
+                  a choice to switch between light and dark mode. <br />
                   skills: HTML and Css, Js.
                 </p>
                 <div>
@@ -314,14 +365,14 @@
                     class="links-container d-flex justify-content-center mb-sm-2 mb-md-3 pb-2 pt-1"
                   >
                     <a
-                      href="https://aya-3bdo.github.io/CRUD-App/crud.html"
+                      href="#"
                       target="_blank"
                     >
                       <i class="fas fa-external-link-alt"></i>
                     </a>
 
                     <a
-                      href="https://github.com/aya-3bdo/CRUD-App"
+                      href="#"
                       target="_blank"
                     >
                       <i class="fab fa-github"></i>
@@ -334,12 +385,12 @@
 
           <div class="col-lg-4 col-md-6 my-2 my-lg-3">
             <div
-              class="parent border rounded-3 p-3 d-flex flex-column align-items-center justify-content-center position-relative"
+              class="parent border rounded-3 p-4 p-md-3 d-flex flex-column align-items-center justify-content-center position-relative"
             >
               <div>
                 <img
                   class="img-fluid x-o-game"
-                  src="/imgs/Tic-Tac-Toe.png"
+                  src="./imgs/Tic-Tac-Toe.jpeg"
                   alt="Tic-Tac-Toe game image"
                 />
               </div>
@@ -360,14 +411,14 @@
                     class="links-container d-flex justify-content-center mb-sm-2 mb-md-3 pb-2 pt-1"
                   >
                     <a
-                      href="https://aya-3bdo.github.io/Tic-Tac-Toe/"
+                      href="#"
                       target="_blank"
                     >
                       <i class="fas fa-external-link-alt"></i>
                     </a>
 
                     <a
-                      href="https://github.com/aya-3bdo/Tic-Tac-Toe"
+                      href="#"
                       target="_blank"
                     >
                       <i class="fab fa-github"></i>
@@ -378,65 +429,19 @@
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 my-2 my-lg-3">
-            <div
-              class="parent border rounded-3 p-3 d-flex flex-column align-items-center justify-content-center position-relative"
-            >
-              <div>
-                <img
-                  class="img-fluid"
-                  src="/imgs/Gallery.png"
-                  alt="gallery project image"
-                />
-              </div>
-              <div class="text-black-50 fw-bold fs-5 py-2 text-capitalize">
-                Photo gallery
-              </div>
-              <div
-                class="project-details d-flex flex-column justify-content-center py-2 text-center"
-              >
-                <p class="mt-4 py-lg-2 py-1 px-2 px-lg-3 mb-0">
-                  A simple responsive photo gallery with a button for switching
-                  between light and dark mode. <br />
-                  skills: HTML, Css and Js.
-                </p>
-                <div>
-                  <div
-                    class="links-container d-flex justify-content-center mb-sm-2 mb-md-3 pb-2 pt-1"
-                  >
-                    <a
-                      href="https://aya-3bdo.github.io/Responsive-Photo-Gallery-/file.htm"
-                      target="_blank"
-                    >
-                      <i class="fas fa-external-link-alt"></i>
-                    </a>
-                    <a
-                      href="https://github.com/aya-3bdo/Responsive-Photo-Gallery-"
-                      target="_blank"
-                    >
-                      <i class="fab fa-github"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
 
-    <!-- -- -- -- -- -- -- -- -- -- -- -- --  Fourth Section  -- -- -- -- -- -- -- -- -- -- -- --  -->
-    <div
-      id="testimonies"
-      class="section_4 d-flex justify-content-center align-items-center flex-column"
-    >
+                          <!-- -- -- -- -- -- -- -- -- -- -- -- --  Fourth Section  -- -- -- -- -- -- -- -- -- -- -- --  -->
+    <div id="testimonies" class="section_4 d-flex justify-content-center align-items-center flex-column">
       <div class="container">
         <div class="parent text-center px-auto text-capitalize">
           <div class="fs-1 my-2">testimonies</div>
           <p class="fs-5 text-black-50">see some reviews from our clients</p>
         </div>
 
-        <!-- -- -- -- -- -- -- -- -- -- -- -- --  Carousel Slice  -- -- -- -- -- -- -- -- -- -- -- --  -->
+                          <!-- -- -- -- -- -- -- -- -- -- -- -- --  Carousel Slice  -- -- -- -- -- -- -- -- -- -- -- --  -->
         <div class="carou_parent my-2">
           <div class="container">
             <div
@@ -571,38 +576,31 @@
       </div>
     </div>
 
-    <!-- -- -- -- -- -- -- -- -- -- -- -- --  Fifth Section -- -- -- -- -- -- -- -- -- -- -- --  -->
-    <div class="fifth_section mt-5 px-2 ">
-      <div
-        id="contacts"
-        class="container-md my-3 pb-4 d-flex justify-content-center align-items-center flex-column"
-      >
-        <div class="row mt-3 d-flex justify-content-between align-items-center">
-          <div class="col-12 text-center mx-auto mb-sm-3 pb-5 mb-md-5">
-            <h2 class="fs-1 text-capitalize text-white-50">my contacts</h2>
-          </div>
-          <!-- -- -- -- -- -- -- -- -- -- -- -- --  Contacts Slice  -- -- -- -- -- -- -- -- -- -- -- --  -->
-          <div class="col-4 px-3 mb-2 mb-lg-0">
-            <div
-              class="contacts d-flex justify-content-start flex-column flex-lg-row"
-            >
-              <a href="https://t.me/Aya_3bdo " target="_blank">
-                <i class="fa-regular fa-paper-plane"></i>
-              </a>
+                          <!-- -- -- -- -- -- -- -- -- -- -- -- --  Fifth Section -- -- -- -- -- -- -- -- -- -- -- --  -->
+    <div class="fifth_section mt-5 px-2 "> 
+      <div  id="contacts"  class=" container-md my-3  pb-4  d-flex justify-content-center align-items-center flex-column">
+        <div class="row mt-3  d-flex justify-content-between  align-items-center">
+       <div class="col-12 text-center mx-auto  mb-sm-3 pb-5 mb-md-5">
+          <h2 class="fs-1 text-capitalize text-white-50">my contacts</h2>
+       </div>
+                          <!-- -- -- -- -- -- -- -- -- -- -- -- --  Contacts Slice  -- -- -- -- -- -- -- -- -- -- -- --  -->
+            <div class="col-4 px-3 mb-2 mb-lg-0 ">
+              <div class="contacts d-flex justify-content-start flex-column flex-lg-row">
+                <a href="https://t.me/Aya_3bdo " target="_blank">
+                  <i class="fa-regular fa-paper-plane"></i>
+                </a>
 
-              <a
-                href="https://www.linkedin.com/in/aya-abdelghany-177263238 "
-                target="_blank"
-              >
-                <i class="fa-brands fa-linkedin-in"></i>
-              </a>
+                 <a href="https://www.linkedin.com/in/aya-abdelghany-177263238 " target="_blank" >
+                 <i class="fa-brands fa-linkedin-in"></i>
+                </a>
 
-              <a href="https://github.com/aya-3bdo/" target="_blank">
-                <i class="fab fa-github"></i>
-              </a>
+                <a href="https://github.com/aya-3bdo/"  target="_blank"  >
+                  <i class="fab fa-github"></i>
+                </a>
+
+              </div>
             </div>
-          </div>
-          <!-- -- -- -- -- -- -- -- -- -- -- -- --  Form Slice  -- -- -- -- -- -- -- -- -- -- -- --  -->
+                          <!-- -- -- -- -- -- -- -- -- -- -- -- --  Form Slice  -- -- -- -- -- -- -- -- -- -- -- --  -->
 
           <div class="col-8 px-3 mb-2 mb-lg-0">
             <div class="message">
@@ -611,55 +609,24 @@
                 method="POST"
                 class="d-flex justify-content-center flex-column align-items-center text-capitalize"
               >
-                <button
-                  id="name-pop"
-                  type="button"
-                  class="btn mb-2"
-                  data-bs-container="body"
-                  data-bs-toggle="popover"
-                  data-bs-placement="top"
-                  data-bs-content="Top popover"
-                >
-                  Please enter a valid name
-                </button>
+
                 <input
                   placeholder="Enter your name"
                   type="text"
                   required="true"
                   class="d-block bg-transparent text-white-50 mb-2 mb-lg-3 py-2 ps-2"
                 />
-                <button
-                  id="msg-pop"
-                  type="button"
-                  class="btn mb-2"
-                  data-bs-container="body"
-                  data-bs-toggle="popover"
-                  data-bs-placement="top"
-                  data-bs-content="Top popover"
-                >
-                  Please enter a valid message
-                </button>
-                <button
-                  id="counter-pop"
-                  type="button"
-                  class="btn mb-2"
-                  data-bs-container="body"
-                  data-bs-toggle="popover"
-                  data-bs-placement="top"
-                  data-bs-content="Top popover"
-                >
-                  You'v reached the maximum number of characters
-                </button>
+
                 <textarea
                   placeholder="write your message"
-                  maxlength="220"
+                  maxlength="250"
                   required="true"
                 
                   class="d-block text-white-50 p-2 mb-1 overflow-x-hidden"
                 ></textarea>
                 <span
                   class="counter d-block bg-transparent mb-2 text-white-50 me-auto"
-                  >0/0</span
+                  >0/250</span
                 >
 
                 <input
@@ -681,18 +648,24 @@
       </div>
     </div>
 
-    <!-- -- -- -- -- -- -- -- -- -- -- -- --  JS Scripts -- -- -- -- -- -- -- -- -- -- -- --  -->
+      </div>
+      </div>  
+                          <!-- -- -- -- -- -- -- -- -- -- -- -- --  JS Scripts -- -- -- -- -- -- -- -- -- -- -- --  -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/all.min.js"></script>
-    <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/typed.min.js"></script>
-    <!-- Emailjs script to recieve message to my email. -->
-    <script src="js/email.min.js"></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init("dDQInpynkEPMT3lO1");
-      })();
-    </script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+`<script src="js/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init('dDQInpynkEPMT3lO1');
+   })();
+</script>
+
+
     <script src="js/main.js"></script>
+
+
+
   </body>
 </html>

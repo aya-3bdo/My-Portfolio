@@ -1,32 +1,19 @@
 // The container function
 $(document).ready(function () {
-  // Get The elements.
   let progressBar = document.querySelectorAll(".progress-bar");
-  let skillBar = $("#skills")[0];
+  let skillBar = document.querySelector(".skills-bars");
   let imgProfileContainer = $(".imgProfile-container")[0];
   let aboutMe = $(".about-me")[0];
-  let skillsHeader = $("#skillsHeader")[0];
-  let form = $("form")[0];
-  let userMessage = $("textarea")[0];
-  let name = $("[type = 'text']")[0];
-  let email = $("[type = 'email']")[0];
+  let mySkills = $(".skills-slice")[0];
+  let skillsHeader = mySkills.firstElementChild.firstElementChild;
+  let form = document.getElementsByTagName("form")[0];
+  let userMessage = document.getElementsByTagName("textarea")[0];
+  let name = document.querySelector('[type="text"]');
+  let email = document.querySelector('[type="email"]');
   let characterCounter = $(".counter")[0];
   let txtAreaMaxlength = userMessage.getAttribute("maxlength");
 
-  /*  ------------------  Call textArea counter function everytime the page reloads    -------------------- */
-  textareaCounter();
-
-  /* ---------------------------------------  TextArea counter function ------------------------------------ */
-  function textareaCounter() {
-    characterCounter.innerText = `${userMessage.value.length} / ${txtAreaMaxlength}`;
-    if (userMessage.value.length == 220) {
-      $("#counter-pop").fadeIn(100).fadeOut(4500);
-    }
-  }
-  /*  ------------------  Call textArea counter function everytime the user hits the keyboard to write the message   -------------------- */
-  userMessage.addEventListener("keyup", textareaCounter);
-
-  /* ---------------------------------------  Typing function of  the personal Data ------------------------------------ */
+  /* ---------------------------------------  Typing function ------------------------------------ */
   new Typed(".personalData", {
     strings: [
       "",
@@ -66,45 +53,27 @@ $(document).ready(function () {
   observer.observe(skillBar);
   observer.observe(imgProfileContainer);
 
-  /* ---------------------------------------  Intersection Oserver function End------------------------------------ */
+  /* ---------------------------------------  Intersection Observer function End  ------------------------------------ */
 
-  /*   ------------------------------------------   resivenig messages functions---------------------------------------------------*/
+  /*   ------------------------------------------   recieving messages functions  ---------------------------------------------------*/
 
-  // ------------------------>> Form Validation function [1].
+  // <<-----------------------------------------  ## Form Validation function [1] ##  ----------------------------------------->>
 
   form.addEventListener("submit", (e) => {
-    let fieldsSatisfied = true;
-    if (!fieldsSatisfied) {
-      e.preventDefault();
+    if (!navigator.onLine) {
+      alert("Please, check your internet connection.");
     }
-
-    if (name.value === "" || name.value.length <= 2 || name.value === null) {
-      $("#name-pop").fadeIn(500, function () {
-        $("#name-pop").fadeOut(5500);
-      });
-      fieldsSatisfied = false;
-    } else if (
-      userMessage.value.length < 10 ||
-      userMessage.value === "" ||
-      userMessage.value === null
-    ) {
-      $("#msg-pop").fadeIn(500, function () {
-        $("#msg-pop").fadeOut(5500);
-      });
-      fieldsSatisfied = false;
-    } else {
-      try {
-        sendMessage();
-      } catch (error) {
-        alert(
-          "OOPS! message hasn't beent sent .. You can text me on Telegram or Linkedin or try again later."
-        );
-        console.log(error);
-      }
+    try {
+      sendMessage();
+    } catch (error) {
+      alert(
+        "OOPS! Your message hasn't been sent .. You can text me on Telegram or Linkedin or try again later."
+      );
+      console.log(error);
     }
   });
 
-  // ------------------------>> Send Message function[2].
+  // <<<-----------------------------------------  ## Send Message function[2] ##  ----------------------------------------->>>
 
   function sendMessage() {
     let templateParams = {
@@ -122,12 +91,33 @@ $(document).ready(function () {
       .then((res) => {
         console.log(res);
         if (res.status === 200 || res.text === "OK") {
-          alert("message has beent sent successfully");
+          alert("Your message has been sent successfully");
+          name.value = null;
+          userMessage.value = null;
+          email.value = null;
+          characterCounter.innerText = "0/250";
         } else {
           throw "Something went wrong while sending the message.";
         }
       });
   }
+
+  /*  ------------------  Call textArea counter function everytime the page reloads    -------------------- */
+  // textareaCounter();
+
+  /* ---------------------------------------  TextArea counter function ------------------------------------ */
+  function textareaCounter() {
+    characterCounter.innerText = `${userMessage.value.length} / ${txtAreaMaxlength}`;
+  }
+  /*  ------------------  Call textArea counter function everytime the user hits the keyboard to write the message   -------------------- */
+  userMessage.addEventListener("keyup", textareaCounter);
+
+  onload = () => {
+    characterCounter.innerText = "0/250";
+    userMessage.value = null;
+    name.value = null;
+    email.value = null;
+  };
 
   // The end of onreload function
 });
