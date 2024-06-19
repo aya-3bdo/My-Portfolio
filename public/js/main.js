@@ -1,3 +1,4 @@
+import {SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY_ID } from './keyScripts.js';
 // The container function
 $(document).ready(function () {
   let progressBar = document.querySelectorAll(".progress-bar");
@@ -82,9 +83,9 @@ $(document).ready(function () {
       email: email.value,
     };
 
-    const serviceID = "service_si3gfut";
-    const templateID = "template_st8ov1q";
-    const publicKey = "HlNRXzIkao7BJc09s";
+    const serviceID = SERVICE_ID;
+    const templateID = TEMPLATE_ID;
+    const publicKey = PUBLIC_KEY_ID;
 
     emailjs
       .send(serviceID, templateID, templateParams, publicKey)
