@@ -159,6 +159,12 @@ h2 {
 }
 
 /* ----------------------- section 2  ----------------------------------*/
+div.aboutContainer div.imgProfile-container{
+  max-width: 80%;
+  max-height: 70%;
+}
+
+
 .section_2 .aboutContainer,
 .section_2 .skills-slice {
   position: relative;

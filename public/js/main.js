@@ -1,5 +1,4 @@
 // The container function
-import {SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY} from './keyScripts.js'
 $(document).ready(function () {
   // Get The elements.
   let progressBar = document.querySelectorAll(".progress-bar");
@@ -72,58 +71,9 @@ $(document).ready(function () {
 
   /*   ------------------------------------------   resivenig messages functions---------------------------------------------------*/
 
-  // ------------------------>> Form Validation function [1].
- 
-  form.addEventListener("submit", (e) => {
-    let fieldsSatisfied = true;
-    if (!fieldsSatisfied) {
-      e.preventDefault();
-    }
-
-    if (name.value === "" || name.value.length <= 2 || name.value === null) {
-      $("#name-pop").fadeIn(500, function () {
-        $("#name-pop").fadeOut(5500);
-      });
-      fieldsSatisfied = false;
-    } else if (userMessage.value.length < 10 || userMessage.value === "" || userMessage.value === null) {
-      $("#msg-pop").fadeIn(500, function () {
-        $("#msg-pop").fadeOut(5500);
-      });
-      fieldsSatisfied = false;
-    } else {
-      try {
-      sendMessage();  
-      } catch (error) {
-        alert("OOPS! message hasn't beent sent .. You can text me on Telegram or Linkedin or try again later.");
-        console.log(error);
-      }
-    }
-  });
-
   // ------------------------>> Send Message function[2].
   
-  function sendMessage() {
-    let templateParams = {
-      name: name.value,
-      userMessage: userMessage.value,
-      email: email.value,
-    };
 
-    const serviceID = SERVICE_ID;
-    const templateID = TEMPLATE_ID;
-    const publicKey = PUBLIC_KEY;
-
-    emailjs
-      .send(serviceID, templateID, templateParams, publicKey)
-      .then((res) => {
-        console.log(res);
-        if (res.status === 200 || res.text === "OK") {
-           alert("message has beent sent successfully")
-        } else {
-           throw "Something went wrong while sending the message."
-        } 
-      })
-  }
 
   // The end of onreload function
 });
