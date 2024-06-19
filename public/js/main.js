@@ -1,4 +1,3 @@
-import {SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY_ID } from './keyScripts.js';
 // The container function
 $(document).ready(function () {
   let progressBar = document.querySelectorAll(".progress-bar");
@@ -60,48 +59,7 @@ $(document).ready(function () {
 
   // <<-----------------------------------------  ## Form Validation function [1] ##  ----------------------------------------->>
 
-  form.addEventListener("submit", (e) => {
-    if (!navigator.onLine) {
-      alert("Please, check your internet connection.");
-    }
-    try {
-      sendMessage();
-    } catch (error) {
-      alert(
-        "OOPS! Your message hasn't been sent .. You can text me on Telegram or Linkedin or try again later."
-      );
-      console.log(error);
-    }
-  });
-
-  // <<<-----------------------------------------  ## Send Message function[2] ##  ----------------------------------------->>>
-
-  function sendMessage() {
-    let templateParams = {
-      name: name.value,
-      userMessage: userMessage.value,
-      email: email.value,
-    };
-
-    const serviceID = SERVICE_ID;
-    const templateID = TEMPLATE_ID;
-    const publicKey = PUBLIC_KEY_ID;
-
-    emailjs
-      .send(serviceID, templateID, templateParams, publicKey)
-      .then((res) => {
-        console.log(res);
-        if (res.status === 200 || res.text === "OK") {
-          alert("Your message has been sent successfully");
-          name.value = null;
-          userMessage.value = null;
-          email.value = null;
-          characterCounter.innerText = "0/250";
-        } else {
-          throw "Something went wrong while sending the message.";
-        }
-      });
-  }
+ 
 
   /*  ------------------  Call textArea counter function everytime the page reloads    -------------------- */
   // textareaCounter();
