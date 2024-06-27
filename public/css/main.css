@@ -372,8 +372,12 @@ h2 {
     margin-top: 0 !important;
     padding-top: 0 !important;
   }
+  
 }
-
+.section_3 .container .row div.col-lg-4.col-md-6 {
+    display: flex;
+    align-self: stretch;
+  }
 /* ----------------------- section 4  ----------------------------------*/
 .section_4 {
   min-height: 50vh;
@@ -397,10 +401,12 @@ h2 {
   position: static;
 }
 
-.section_4 .container .carousel-indicators [data-bs-target] {
+#testimonies .carousel-indicators [data-bs-target]  {
   border-radius: 100% !important;
-  width: 0.7rem !important;
-  height: 0.7rem !important;
+  width: 0.6rem !important;
+  height: 0.6rem !important;
+  position: relative;
+  top: 102%;
 }
 
 /* ----------------------- section 5  ----------------------------------*/
