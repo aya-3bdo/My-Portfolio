@@ -17,7 +17,7 @@ $(document).ready(function () {
   new Typed(".personalData", {
     strings: [
       "",
-      "my name is aya abdelghany",
+      "my name Jane Doe",
       "i'm a web developer",
       "i'm a frontEnd developer with React",
     ],
@@ -54,15 +54,6 @@ $(document).ready(function () {
   observer.observe(imgProfileContainer);
 
   /* ---------------------------------------  Intersection Observer function End  ------------------------------------ */
-
-  /*   ------------------------------------------   recieving messages functions  ---------------------------------------------------*/
-
-  // <<-----------------------------------------  ## Form Validation function [1] ##  ----------------------------------------->>
-
- 
-
-  /*  ------------------  Call textArea counter function everytime the page reloads    -------------------- */
-  // textareaCounter();
 
   /* ---------------------------------------  TextArea counter function ------------------------------------ */
   function textareaCounter() {
